@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="/css/styles.css">
+        <title>{{title}}</title>
+    </head>
+    <body>
+        <div class="content">
+            {{>header}}
+            <form>
+                <input placeholder="Location">
+                <button type="submit">Search</button>
+            </form>
+            <h3 id="temp"></h3>
+            <h3 id="feelslike"></h3>
+            <h3 id="summary"></h3>
+            
+        </div>
+        {{>footer}}
+
+        <script src="/js/main.js"></script>
+
+    </body>
+</html>
