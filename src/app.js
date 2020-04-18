@@ -2,6 +2,8 @@ const express = require('express')
 const path = require('path');
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 3000
+
 const webRequest = require('./utils')
 let defaultCity = "philadelphia,PA"
 
@@ -74,6 +76,6 @@ app.get("*", (req, resp) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log("Server started on port 3000")
+app.listen(port, () => {
+    console.log("Server started on port "+port)
 })

@@ -11,7 +11,7 @@ var conentElement = document.querySelector('.content')
 form.addEventListener('submit', (event)=>{
     event.preventDefault()
     const location = input.value
-    fetch('http://localhost:3000/getweather?address='+location).then(resp=>{
+    fetch('/getweather?address='+location).then(resp=>{
         resp.json().then(({temperature, weather_icons, weather_descriptions, feelslike})=>{
             tempElement.textContent = "Temperature: "+temperature
             feelslikeElement.textContent = "Feels Like: "+feelslike
